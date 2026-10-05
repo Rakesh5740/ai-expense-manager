@@ -1,10 +1,13 @@
 package com.example.aiexpensemanager.data.local
 
-import android.database.sqlite.SQLiteDatabase
-import com.example.aiexpensemanager.domain.model.Expense
+import androidx.room3.Database
+import androidx.room3.RoomDatabase
 
-class ExpenseDatabase{
-
-    private val expenseList: MutableList<Expense> = mutableListOf()
-
+@Database(
+    entities = [ExpenseEntity::class],
+    version = 1,
+    exportSchema = true
+)
+abstract class ExpenseDatabase : RoomDatabase() {
+    abstract fun expenseDao(): ExpenseDao
 }
