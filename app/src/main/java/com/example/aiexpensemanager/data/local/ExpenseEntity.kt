@@ -10,7 +10,7 @@ class ExpenseEntity(
     val id: Int = 0,
     val amount: Double,
     val description: String,
-    val date: String,
+    val date: Long,
     val category: String,
     val merchant: String
 )

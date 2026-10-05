@@ -23,9 +23,20 @@ class ExpenseViewModel @Inject constructor(
             initialValue = emptyList()
         )
 
-    fun addExpense(expenseEntity: ExpenseEntity) {
+    fun addExpense( amount: Double,
+                    category: String,
+                    merchant: String,
+                    description: String,
+                    date: Long) {
+        val expense = ExpenseEntity(
+            amount = amount,
+            category = category,
+            merchant = merchant,
+            description = description,
+            date = date
+        )
         viewModelScope.launch {
-            repository.insertExpense(expenseEntity)
+            repository.insertExpense(expense)
         }
     }
 
