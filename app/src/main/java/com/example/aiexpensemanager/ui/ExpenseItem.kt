@@ -14,6 +14,13 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
+private fun formatExpenseDate(timestamp: Long): String {
+    return SimpleDateFormat(
+        "dd MMM yyyy, hh:mm a",
+        Locale.getDefault()
+    ).format(Date(timestamp))
+}
+
 @Composable
 fun ExpenseItem(
     expense: ExpenseEntity,
@@ -21,10 +28,7 @@ fun ExpenseItem(
     onEdit:(ExpenseEntity) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val formattedDate = SimpleDateFormat(
-        "dd MMM yyyy, hh:mm a",
-        Locale.getDefault()
-    ).format(Date(expense.date))
+    val formattedDate = formatExpenseDate(expense.date)
 
     Card(
         modifier = Modifier

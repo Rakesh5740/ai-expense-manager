@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "852651176734",
+    "project_id": "ai-expense-manager-48749",
+    "storage_bucket": "ai-expense-manager-48749.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:852651176734:android:7c2d81a936ab8d53380f0f",
+        "android_client_info": {
+          "package_name": "com.example.aiexpensemanager"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzslS7bot7-HK2xRRPL_FCCNTnSjuTUg4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
