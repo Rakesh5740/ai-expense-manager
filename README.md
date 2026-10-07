@@ -93,3 +93,8 @@ Room
 
 Current milestone:
 AI-powered expense extraction and local expense management.
+
+<img width="1080" height="2400" alt="Screenshot_20261007_181211" src="https://github.com/user-attachments/assets/8b0891c4-300d-4ea4-9357-d76c6b5ae081" />
+<img width="1080" height="2400" alt="Screenshot_20261007_181224" src="https://github.com/user-attachments/assets/874389d9-101d-4a1e-9c34-4b694a4452cc" />
+
+
