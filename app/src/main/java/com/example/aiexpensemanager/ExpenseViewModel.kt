@@ -58,11 +58,11 @@ class ExpenseViewModel @Inject constructor(
                     text = text,
                     currentDate = currentDate
                 )
+                Log.d("AI_EXPENSE", "JSON from Gemini: $json")
 
                 val aiExpense = aiExpenseParser.parse(json)
                 aiExpenseValidator.validate(aiExpense)
                 val expenseEntity = aiExpenseMapper.toExpenseEntity(aiExpense)
-
                 repository.insertExpense(expenseEntity)
 
                 _aiState.value = AiExpenseUiState.Success(

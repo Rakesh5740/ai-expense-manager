@@ -1,5 +1,6 @@
 package com.example.aiexpensemanager.data.repository
 
+import android.util.Log
 import com.google.firebase.Firebase
 import com.google.firebase.ai.ai
 import com.google.firebase.ai.type.GenerativeBackend
@@ -22,7 +23,7 @@ class GeminiRepository @Inject constructor() {
     private val expenseModel = Firebase.ai(
         backend = GenerativeBackend.googleAI()
     ).generativeModel(
-        modelName = "gemini-3.8-flash",
+        modelName = "gemini-3.5-flash-lite",
         generationConfig = generationConfig {
             responseMimeType = "application/json"
             responseSchema = expenseSchema
@@ -68,7 +69,6 @@ class GeminiRepository @Inject constructor() {
 """.trimIndent()
 
         val response = expenseModel.generateContent(prompt)
-
         return response.text ?: ""
     }
 }
